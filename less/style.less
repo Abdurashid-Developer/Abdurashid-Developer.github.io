@@ -1,0 +1,88 @@
+@import "./params/mix.less";
+@import "./params/variables.less";
+@import "./headaer.less";
+@import "./services.less";
+@import "./portfolio.less";
+@import "./about.less";
+@import "./team.less";
+@import "./info.less";
+@import "./contact.less";
+@import "./footer.less";
+#hellopreloader>p {
+  display: none;
+}
+
+#hellopreloader_preload {
+  display: flex;
+  position: fixed;
+  z-index: 99999 !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #3d3d3f url('../img/Puff.svg') center 50% no-repeat;
+  background-size: 400px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  color: #fff; // #2C3E50
+}
+.pulse-effect {
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+}
+
+h2 {
+  color: #222222;
+  font-size: 34px;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+h2:hover {
+  color: #fed136;
+  transition: 0.5s;
+}
+
+h4 {
+  color: #222222;
+  font-size: 18px;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-top: 20px;
+}
+
+h4:hover {
+  color: #fed136;
+  transition: 0.5s;
+}
+
+#scrollUp {
+  background: url(../img/top.png)no-repeat scroll 0 0;
+  bottom: 80px;
+  color: #000;
+  height: 40px;
+  right: 20px;
+  width: 40px;
+  opacity: 0.7;
+}
+
+#scrollUp:hover {
+  background: url(../img/top.png)no-repeat scroll 0 -40px;
+}
+
+.fix {
+  background: #6a696d;
+  box-shadow: 0 10px 15px #fed136;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
