@@ -1,0 +1,94 @@
+.fruct {
+  background: #fd634e;
+  .grapes img {
+    height: 332px;
+    max-width: 100%;
+    left: -40px;
+  }
+  .mango img {
+    height: 332px;
+    margin-left: -30px;
+  }
+  h2 {
+    color: #a2ca28;
+    text-transform: uppercase;
+  }
+  p {
+    color: @white;
+  }
+  span {
+    color: #a2ca28;
+    text-transform: uppercase;
+  }
+  .fa {
+    color: #a2ca28;
+    font-size: 25px;
+    justify-content: center;
+  }
+  .get {
+    background: @white;
+    min-height: 200px;
+  }
+  .get p {
+    color: @font;
+    font-size: 14px;
+    margin-left: 30px;
+  }
+  .get h2 {
+    margin-left: 30px;
+  }
+  .habits {
+    background: #a2ca28;
+    min-height: 200px;
+    margin-left: -30px;
+  }
+  .habits p {
+    color: @white;
+    margin-left: 30px;
+  }
+  .habits h2 {
+    color: @white;
+    margin-left: 30px;
+  }
+  @media(max-width: 320px) {
+    .mango img {
+      margin-top: 30px;
+    }
+    .grapes {
+      height: 300px;
+    }
+    .habits {
+      margin-top: 14px;
+    }
+  }
+  @media(max-width: 576px) {
+    .mango img {
+      min-width: 100%;
+      margin: 0;
+    }
+    .habits {
+      margin: 0;
+    }
+  }
+  @media(max-width: 768px) {
+    .mango img {
+      width: 230px;
+    }
+    .habits {
+      margin: 0;
+    }
+  }
+  @media(max-width: 992px) {
+    .mango img {
+      width: 310px;
+    }
+    .habits {
+      margin-left: -30px;
+      min-height: 271px;
+    }
+    .get {
+      min-height: 271px;
+      margin-bottom: -30px;
+    }
+  }
+}
