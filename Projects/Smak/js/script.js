@@ -10,10 +10,33 @@ $(document).ready(function () {
     });
 });
 $(document).ready(function () {
-    var link = $('.navbar-nav a');
     var header = $('header');
     var menu = $('.menu-top');
     var flag = false;
+    var link = $('.navbar-nav a');
+    
+    function menuFixed() {
+        if (scrollY >= header.innerHeight() && !flag) {
+            menu.addClass('fix').css('opacity', 0).animate({
+                opacity: '1'
+            }, 500);
+            header.css({
+                paddingTop: menu.innerHeight()
+            });
+            flag = true;
+        } else if (scrollY <= header.innerHeight() && flag) {
+            menu.animate({
+                opacity: '0'
+            }, 500, function () {
+                menu.removeClass('fix').removeAttr('style');
+            });
+            header.removeAttr('style');
+            flag = false;
+        }
+    }
+    $(window).on('scroll', menuFixed);
+    menuFixed();
+    
 
     //scroll
     link.on('click', function (e) {
@@ -44,31 +67,11 @@ $(document).ready(function () {
 
     new WOW().init();
 
-    $('.counter').counterUp({
-        delay: 10,
-        time: 1500
-    });
+//     $('.counter').counterUp({
+//         delay: 10,
+//         time: 1500
+//     });
 
-    function menuFixed() {
-        if (scrollY >= header.innerHeight() && !flag) {
-            menu.addClass('fix').css('opacity', 0).animate({
-                opacity: '1'
-            }, 500);
-            header.css({
-                paddingTop: menu.innerHeight()
-            });
-            flag = true;
-        } else if (scrollY <= header.innerHeight() && flag) {
-            menu.animate({
-                opacity: '0'
-            }, 500, function () {
-                menu.removeClass('fix').removeAttr('style');
-            });
-            header.removeAttr('style');
-            flag = false;
-        }
-    }
-    $(window).on('scroll', menuFixed);
-    menuFixed();
+    
 
 });
